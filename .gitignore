@@ -12,6 +12,7 @@ cypress/videos/
 cypress/results/
 cypress/downloads/
 cypress/logs/
+snapshots/
 
 # VSCode
 .vscode/
