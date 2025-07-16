@@ -10,5 +10,19 @@ describe('Login Page Visual Testing', () => {
         cy.get('.orangehrm-login-branding', {timeout: 10000}).should('be.visible')
         cy.get('.orangehrm-login-footer', {timeout: 10000}).should('be.visible')
     
+    })
+    it('Confirm that login page is the same visually', () => {
+        cy.get('.oxd-text--h5', {timeout: 10000}).contains('Login').should('be.visible')//wait for load
+        cy.matchImageSnapshot('Login-Page')
+    })
+
+    it('Should have correct logo image and should be visible', () => {
+        cy.get('.orangehrm-login-logo > img').should('be.visible')
+         .and($img => {
+            expect($img[0].naturalWidth).to.be.greaterThan(0)
+            expect($img[0].naturalHeight).to.be.greaterThan(0)
+        })
+        .and('have.attr', 'src')
+        .and('include', 'ohrm_logo.png')
 })
 })
