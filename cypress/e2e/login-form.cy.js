@@ -13,7 +13,7 @@ describe('Login Page Visual Testing', () => {
     })
     it('Confirm that login page is the same visually', () => {
         cy.get('.oxd-text--h5', {timeout: 10000}).contains('Login').should('be.visible')//wait for load
-        cy.matchImageSnapshot('Login-Page')
+        cy.getmatchImageSnapshot('Login-Page')
     })
 
     it('Should have correct logo image and should be visible', () => {
@@ -25,4 +25,9 @@ describe('Login Page Visual Testing', () => {
         .and('have.attr', 'src')
         .and('include', 'ohrm_logo.png')
 })
+    it('should have consistent logo appearance', () => {
+        cy.get('.orangehrm-login-logo > img').should('be.visible')
+        cy.matchImageSnapshot('Login-Logo')
+    })
+
 })
