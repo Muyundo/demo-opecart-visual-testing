@@ -24,8 +24,8 @@ Visual testing (or visual regression testing) is a technique to automatically de
 
 1. **Clone the repository**  
    ```sh
-   git clone <your-repo-url>
-   cd <project-directory>
+   git clone https://github.com/Muyundo/demo-opecart-visual-testing.git
+   cd demo-opencart-visual-testing
    ```
 
 2. **Install dependencies**  
