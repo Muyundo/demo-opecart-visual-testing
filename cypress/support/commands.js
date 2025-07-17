@@ -26,5 +26,11 @@
 Cypress.Commands.add('BaseUrl', (url) => {
     cy.visit('https://opensource-demo.orangehrmlive.com/')
 })
+Cypress.Commands.add('Login', () => {
+    cy.get('input[name="username"]', {timeout: 10000}).type('Admin')
+        cy.get('input[name="password"]', {timeout: 10000}).type('admin123')
+        cy.get('.oxd-button').click()
+})
+
 import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 addMatchImageSnapshotCommand();
