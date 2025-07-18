@@ -20,6 +20,3 @@ describe('Home Page Visual Testing', () => {
         cy.get('.oxd-layout-context').first().parent().matchImageSnapshot('dashboard-main-widgets-iphone6')
     })
 })
-
-
-
